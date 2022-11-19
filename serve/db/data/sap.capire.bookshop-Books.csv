@@ -1,0 +1,16 @@
+ID;title;author_ID;stock;price;genre_ID
+201;Wuthering Heights;101;12;50;101
+207;Jane Eyre;107;11;30;101
+251;The Raven;150;333;20;201
+252;Eleonora;150;555;15;301
+271;Catweazle;170;22;44;201
+301;Wuthering Heights;101;13;50;101
+307;Jane Eyre;107;11;30;101
+351;The Raven;150;333;30;401
+353;Eleonora;150;555;15;101
+371;Catweazle;170;32;44;301
+401;Wuthering Heights;101;14;50;401
+407;Jane Eyre;107;11;40;301
+451;The Raven;150;444;40;101
+454;Eleonora;150;555;15;201
+471;Catweazle;170;42;44;401
