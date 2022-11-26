@@ -1,0 +1,25 @@
+{
+    "name": "books-v2",
+    "version": "0.0.1",
+    "description": "A Fiori application.",
+    "keywords": [
+        "ui5",
+        "openui5",
+        "sapui5"
+    ],
+    "main": "webapp/index.html",
+    "scripts": {
+        "start": "ui5 serve --config=ui5.yaml  --open index.html?sap-ui-xx-viewCache=false",
+        "build:ui": "run-s  build:uimodule",
+        "test": "run-s lint karma",
+        "karma-ci": "karma start karma-ci.conf.js",
+        "clearCoverage": "shx rm -rf coverage",
+        "karma": "run-s clearCoverage karma-ci",
+        "lint": "eslint ./**/webapp/**/*.js && prettier --plugin-search-dir=. --check ./**/webapp/**/*.{js,xml}",
+        "lint-fix": "eslint ./**/webapp/**/*.js --fix && prettier --plugin-search-dir=. --write ./**/webapp/**/*.{js,xml} --no-error-on-unmatched-pattern",
+        "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
+        "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest uimodule/dist --include-task=generateManifestBundle",
+        "deploy-config": "npx -p @sap/ux-ui5-tooling fiori add deploy-config cf"
+    },
+    "devDependencies": { }
+}
